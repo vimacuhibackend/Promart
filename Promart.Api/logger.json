@@ -1,0 +1,26 @@
+{
+  "Serilog": {
+    "SeqServerUrl": null,
+    "LogstashgUrl": null,
+    "Using": [
+      "Serilog.Sinks.File"
+    ],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "Microsoft.Siu": "Information",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "./Logs/log_.txt",
+          "rollingInterval": "Day"
+        }
+      }
+    ]
+  }
+}
